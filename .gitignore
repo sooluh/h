@@ -1,0 +1,16 @@
+build/
+node_modules/
+.vercel/
+.vscode/
+.next/
+out/
+
+*.log
+.eslintcache
+
+# Yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
