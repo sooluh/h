@@ -1,4 +1,3 @@
-import {throws} from './exceptions';
 import {hasProp, type NextkitError} from 'nextkit';
 
 export class FetcherError extends Error implements NextkitError {
@@ -23,5 +22,3 @@ export async function fetcher<T>(url: string, init?: RequestInit): Promise<T> {
 
 	return json as T;
 }
-
-export const safeFetcher = throws(fetcher, async () => null);
