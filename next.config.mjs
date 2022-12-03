@@ -2,13 +2,13 @@
 
 /** @type {import('next').NextConfig} */
 const config = {
-	reactStrictMode: true,
+  reactStrictMode: true,
 
-	swcMinify: true,
+  swcMinify: true,
 
-	images: {
-		domains: ['source.unsplash.com', 'cdn.discordapp.com'],
-	},
+  images: {
+    domains: ['source.unsplash.com', 'cdn.discordapp.com'],
+  },
 };
 
 export default config;

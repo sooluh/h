@@ -1,18 +1,18 @@
 import {createAPI} from 'nextkit';
 
 export const api = createAPI({
-	async onError(_req, _res, error) {
-		console.warn(error);
+  async onError(_req, _res, error) {
+    console.warn(error);
 
-		return {
-			status: 500,
-			message: error.message,
-		};
-	},
+    return {
+      status: 500,
+      message: error.message,
+    };
+  },
 
-	async getContext() {
-		return {
-			//
-		};
-	},
+  async getContext() {
+    return {
+      //
+    };
+  },
 });
