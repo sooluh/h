@@ -6,9 +6,7 @@ node_modules/
 out/
 
 *.log
-.eslintcache
 
-# Yarn
 .yarn/*
 !.yarn/releases
 !.yarn/plugins

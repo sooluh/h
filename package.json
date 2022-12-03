@@ -27,8 +27,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write .",
-    "lint": "eslint . --fix"
+    "format": "prettier --write ."
   },
   "browserslist": {
     "production": [
@@ -49,16 +48,8 @@
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@types/tailwindcss": "3.0.11",
-    "@typescript-eslint/eslint-plugin": "5.41.0",
-    "@typescript-eslint/parser": "5.41.0",
     "autoprefixer": "10.4.13",
     "danger": "^11.2.0",
-    "eslint": "8.26.0",
-    "eslint-config-next": "13.0.0",
-    "eslint-config-xo": "0.42.0",
-    "eslint-config-xo-react": "0.27.0",
-    "eslint-config-xo-typescript": "0.53.0",
-    "eslint-plugin-tailwindcss": "3.6.2",
     "postcss": "8.4.18",
     "prettier": "2.7.1",
     "tailwindcss": "3.2.1",
