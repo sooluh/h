@@ -30,12 +30,12 @@ export default function AboutPage() {
       <div className="space-y-4">
         <p>
           I'm a Muslim software engineer now {new Date().getFullYear() - 2004} years old and based
-          in Indonesia, I'm highly specialized in web development (full stack) and a bit of mobile
-          development. Currently I am studying Informatics Engineering at{' '}
+          in Indonesia. I'm highly specialized in web development (full stack) and a bit of mobile
+          development. Currently, I am studying informatics engineering at{' '}
           <a href="https://stt-wastukancana.ac.id" target="_blank" rel="noreferrer">
             STT Wastukancana
-          </a>
-          , while also working at{' '}
+          </a>{' '}
+          while also working at{' '}
           <a href="https://pratama.tech" target="_blank" rel="noreferrer">
             PT. Pratama Solusi Teknologi
           </a>{' '}
@@ -43,36 +43,37 @@ export default function AboutPage() {
         </p>
 
         <p>
-          Alhamdulillah, currently I use various technologies to facilitate the development process,
-          when working on clients that I often use is PHP both native and the CodeIgniter 4
-          framework, JavaScript using Express.js or Fastify and TypeScript with the AdonisJS
-          framework. For databases, I am most experienced in MySQL, the rest I have used MongoDB,
-          SQLite3 and RethinkDB.
+          Alhamdulillah, currently I use various technologies to facilitate the development process
+          when working on clients. The technologies that I often use are PHP, both natively and with
+          the CodeIgniter 4 framework, JavaScript using Express.js or Fastify, and TypeScript with
+          the AdonisJS framework. For databases, I am most experienced in MySQL; for the rest, I
+          have used MongoDB, SQLite3, and RethinkDB.
         </p>
 
         <p>
-          I'm also very interested in linux server configuration, it's a little difficult with web
-          server configuration like Nginx or Apache but it's challenging for me. I recently learned
-          Python for a Numerical Methods course in college and I'm pretty happy with it so far.
+          I'm also interested in linux server configuration; it's a little more difficult with web
+          server configuration, such as Nginx or Apache, but it's a challenge for me. I recently
+          learned Python for a Numerical Methods course in college, and I'm pretty happy with it so
+          far.
         </p>
 
         <p>
-          Regarding the device I use, I use Windows 11 with WSL2 which is a must for me because I
-          mostly use the CLI and of course use Linux, I usually use Ubuntu both on my local machine
+          Regarding the device I use, I use Windows 11 with WSL2, which is a must for me because I
+          mostly use the CLI and, of course, Linux. I usually use Ubuntu both on my local machine
           and the servers that I use.
         </p>
 
         <p>
           Apart from programming, I also like to read books on self-development, Islamic motivation,
-          and so on, including story books/history of past pious people, and of course what I have
-          to read every day, the Qur'an. But maybe you regret me, because I don't really like
-          watching movies and listening to music, at least about music I listen to religious music
-          such as prayers or praises to the Prophet Muhammad SAW.
+          and so on, including stories about or histories of past pious people, and of course what I
+          have to read every day, the Qur'an. But you might be sorry because I don't like watching
+          movies or listening to music; at the very least, I only listen to religious music such as
+          prayers or praises to the Prophet Muhammad SAW.
         </p>
 
         <p>
-          If you want to connect more with me, I have several social media that you can check out on
-          my <Link href="/contact">/contact</Link> page.
+          If you want to connect more with me, I have several social media accounts that you can
+          check out on my <Link href="/contact">/contact</Link> page.
         </p>
       </div>
     </div>

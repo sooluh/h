@@ -135,23 +135,24 @@ export default function Index(props: Props) {
 
         <p className="opacity-80">
           I'm an <span suppressHydrationWarning>~{age.toPrecision(7)}</span> year old Muslim
-          software engineer from Indonesia. I'm interested in backend stuff and Alhamdulillah have{' '}
-          {new Date().getFullYear() - 2015}+ years of experience in web development.
+          software engineer from Indonesia. I'm interested in backend stuff, and, Alhamdulillah, I
+          have {new Date().getFullYear() - 2015}+ years of experience in web development.
         </p>
       </div>
 
       <div className="space-y-4">
         <h1 className="text-2xl font-bold sm:text-3xl">What do I do? 🧐</h1>
         <p className="opacity-80">
-          Frankly, too many things to count on one hand... However, now I am very grateful to work
-          at{' '}
+          Frankly, there are too many things to count on one hand... However, now I am very grateful
+          to work at{' '}
           <a href="https://pratama.tech" target="_blank" rel="noreferrer">
             PST
           </a>
-          , we are always building something for the government and private companies. Below are
-          some of the most popular open source projects I've worked on. In total, the following repo
-          rated me {projects.reduce<number>((acc, project) => acc + parseInt(project.stars, 10), 0)}{' '}
-          stars. Thanks! ❤️
+          , where we are always building something for the government and private companies. Below
+          are some of the most popular open-source projects I've worked on. In total, the following
+          repo rated me{' '}
+          {projects.reduce<number>((acc, project) => acc + parseInt(project.stars, 10), 0)} stars.
+          Thanks! ❤️
         </p>
 
         <div className="grid auto-cols-max grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-3">
@@ -165,9 +166,9 @@ export default function Index(props: Props) {
         <h1 className="text-2xl font-bold sm:text-3xl">Technologies 💻</h1>
 
         <p className="opacity-80">
-          I use various tools in my development process to improve the quality of my code. Below is
-          a list of some of the technologies and languages I have experienced, or am currently
-          working with.
+          I use a variety of tools in my development process to increase the quality of my code.
+          Below is a list of technologies and languages that I have had experience with in the past
+          or currently use.
         </p>
 
         <ul className="grid grid-cols-3 gap-4 sm:grid-cols-4">
