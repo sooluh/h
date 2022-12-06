@@ -79,7 +79,7 @@ export function ProjectCard({repo: project}: {repo: PinnedRepo}) {
                 <a
                   href={`https://github.com/${project.owner}/${project.repo}`}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className="inline-flex select-none items-center space-x-2 rounded-full bg-emerald-700 py-2 px-6 text-white no-underline transition-transform duration-500 hover:scale-95 dark:bg-white/10"
                 >
                   <span>View Project</span>

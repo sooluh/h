@@ -61,7 +61,7 @@ export default function Index(props: Props) {
             <a
               href={'https://github.com/' + lanyard.kv.github}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer nofollow"
               aria-label="GitHub Profile"
             >
               <SiGithub className="h-7 w-7" />
@@ -73,7 +73,7 @@ export default function Index(props: Props) {
             <a
               href={'https://twitter.com/' + lanyard.kv.twitter}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer nofollow"
               aria-label="Twitter Profile"
             >
               <SiTwitter className="h-7 w-7" />
@@ -85,7 +85,7 @@ export default function Index(props: Props) {
             <a
               href={'https://wakatime.com/' + lanyard.kv.wakatime}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer nofollow"
               aria-label="WakaTime Profile"
             >
               <SiWakatime className="h-7 w-7" />
@@ -97,7 +97,7 @@ export default function Index(props: Props) {
             <a
               href={'https://linkedin.com/in/' + lanyard.kv.linkedin}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer nofollow"
               aria-label="LinkedIn Profile"
             >
               <FaLinkedinIn className="h-7 w-7" />
@@ -110,7 +110,7 @@ export default function Index(props: Props) {
               <a
                 target="_blank"
                 href={`https://www.google.com/maps/search/${lanyard.kv.location}`}
-                rel="noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="flex items-center rounded-full bg-neutral-200 px-2 pr-3 text-neutral-600 no-underline transition-colors dark:bg-neutral-700 dark:text-white dark:text-opacity-50 dark:hover:bg-neutral-800"
               >
                 <span className="flex items-center">
@@ -136,7 +136,7 @@ export default function Index(props: Props) {
         <p className="opacity-80">
           I'm an <span suppressHydrationWarning>~{age.toPrecision(7)}</span> year old Muslim
           software engineer from Indonesia. I'm interested in backend stuff, and, Alhamdulillah, I
-          have {new Date().getFullYear() - 2015}+ years of experience in web development.
+          have {dayjs().year() - 2015}+ years of experience in web development.
         </p>
       </div>
 
@@ -145,7 +145,7 @@ export default function Index(props: Props) {
         <p className="opacity-80">
           Frankly, there are too many things to count on one hand... However, now I am very grateful
           to work at{' '}
-          <a href="https://pratama.tech" target="_blank" rel="noreferrer">
+          <a href="https://pratama.tech" target="_blank" rel="noopener noreferrer nofollow">
             PST
           </a>
           , where we are always building something for the government and private companies. Below
@@ -202,7 +202,7 @@ export default function Index(props: Props) {
         </ul>
 
         <p className="opacity-40 text-sm">
-          <em>And, I would be open-mind to learning other Tech Stacks if needed.</em>
+          <em>and, I would be open-mind to learning other tech stacks if needed.</em>
         </p>
       </div>
     </>
@@ -215,9 +215,7 @@ export const getStaticProps: GetStaticProps<Props> = async function () {
   );
 
   const request = new Request(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`);
-
   const response = await fetch(request);
-
   const body = (await response.json()) as LanyardResponse;
 
   if ('error' in body) {

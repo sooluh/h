@@ -4,7 +4,7 @@ import 'tailwindcss/tailwind.css';
 import '../styles/global.css';
 import '../../public/fonts/general-sans/css/general-sans.css';
 
-import Head from 'next/head';
+import dayjs from 'dayjs';
 import {SWRConfig} from 'swr';
 import NProgress from 'nprogress';
 import {Router} from 'next/router';
@@ -12,12 +12,14 @@ import type {AppProps} from 'next/app';
 import {fetcher} from '../utils/fetcher';
 import {Toaster} from 'react-hot-toast';
 import {loadCursor} from '../utils/cursor';
-import {ExternalNavLink, NavLink} from '../components/nav-link';
+import {HeadTag} from '../components/head-tag';
 import {Activity} from '../components/activity';
+import relativeTime from 'dayjs/plugin/relativeTime';
 import {Squash as Hamburger} from 'hamburger-react';
 import type {Data as LanyardData} from 'use-lanyard';
 import {AnimatePresence, motion} from 'framer-motion';
 import {StrictMode, useEffect, useRef, useState} from 'react';
+import {ExternalNavLink, NavLink} from '../components/nav-link';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -29,10 +31,11 @@ type PageProps = {
   pinnedRepos?: unknown;
 };
 
+dayjs.extend(relativeTime);
+
 export default function App({Component, pageProps, router}: AppProps<PageProps>) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
-
   const ballCanvas = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
@@ -111,11 +114,9 @@ export default function App({Component, pageProps, router}: AppProps<PageProps>)
           fetcher,
         }}
       >
-        <Toaster toastOptions={{position: 'top-left'}} />
+        <HeadTag />
 
-        <Head>
-          <title>Suluh Sulistiawan</title>
-        </Head>
+        <Toaster toastOptions={{position: 'top-left'}} />
 
         <AnimatePresence>
           {mobileMenuOpen && (
@@ -184,7 +185,7 @@ export default function App({Component, pageProps, router}: AppProps<PageProps>)
 
               <footer className="mx-auto mt-20 md:mt-0 max-w-3xl border-t-2 border-neutral-900/10 p-4 py-10 opacity-50 dark:border-white/10">
                 <h1 className="text-3xl font-bold">Suluh Sulistiawan</h1>
-                <p>Full-Stack Developer • {new Date().getFullYear()}</p>
+                <p>Full-Stack Developer • {dayjs().year()}</p>
               </footer>
             </motion.div>
           </AnimatePresence>

@@ -6,15 +6,17 @@ export default class SuluhDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+          <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
+          <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+          <meta
+            name="description"
+            content="Suluh Sulistiawan, a Muslim software engineer from Indonesia."
+          />
           <link
             rel="icon"
             type="image/png"
             href="https://avatars3.githubusercontent.com/u/20874779?s=460&v=4"
-          />
-          <meta name="theme-color" content="#ffffff" />
-          <meta
-            name="description"
-            content="Suluh Sulistiawan, Full–stack developer from Indonesia"
           />
           <link rel="preconnect" href="https://fontbit.io" />
           <link

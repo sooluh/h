@@ -17,7 +17,12 @@ export function NavLink(props: {children: ReactNode; href: string; closeMenu?: (
 export function ExternalNavLink(props: {children: ReactNode; href: string}) {
   return (
     <li className="shrink-0">
-      <a target="_blank" href={props.href} rel="noreferrer" className={navLinkClassName}>
+      <a
+        target="_blank"
+        href={props.href}
+        rel="noopener noreferrer nofollow"
+        className={navLinkClassName}
+      >
         {props.children}
       </a>
     </li>
