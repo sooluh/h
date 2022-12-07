@@ -6,7 +6,6 @@ export default class SuluhDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
           <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
           <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
           <meta

@@ -5,6 +5,7 @@ import '../styles/global.css';
 import '../../public/fonts/general-sans/css/general-sans.css';
 
 import dayjs from 'dayjs';
+import Head from 'next/head';
 import {SWRConfig} from 'swr';
 import NProgress from 'nprogress';
 import {Router} from 'next/router';
@@ -12,7 +13,6 @@ import type {AppProps} from 'next/app';
 import {fetcher} from '../utils/fetcher';
 import {Toaster} from 'react-hot-toast';
 import {loadCursor} from '../utils/cursor';
-import {HeadTag} from '../components/head-tag';
 import {Activity} from '../components/activity';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import {Squash as Hamburger} from 'hamburger-react';
@@ -114,9 +114,11 @@ export default function App({Component, pageProps, router}: AppProps<PageProps>)
           fetcher,
         }}
       >
-        <HeadTag />
-
         <Toaster toastOptions={{position: 'top-left'}} />
+
+        <Head>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+        </Head>
 
         <AnimatePresence>
           {mobileMenuOpen && (

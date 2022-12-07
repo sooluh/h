@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import {age} from '../utils/time';
 import type {GetStaticProps} from 'next';
 import {FaLinkedinIn} from 'react-icons/fa';
+import {HeadTag} from '../components/head-tag';
 import type {PinnedRepo} from '../hooks/github';
 import {ListItem} from '../components/list-item';
 import {DISCORD_ID} from '../components/activity';
@@ -55,6 +56,8 @@ export default function Index(props: Props) {
 
   return (
     <>
+      <HeadTag />
+
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
           {lanyard?.kv.github && (
