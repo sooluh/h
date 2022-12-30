@@ -20,11 +20,7 @@ export default api({
         embeds: [
           {
             title: 'Respond This?',
-            url: `https://mailto.suluh.my.id/${encodeURIComponent(body.email)}`,
-            author: {
-              name: body.name,
-              icon_url: `https://avatars.dicebear.com/api/miniavs/${body.name}.png`,
-            },
+            url: `https://mailto.suluh.my.id/${body.email}`,
             fields: [
               {
                 name: 'Email',
@@ -40,12 +36,17 @@ export default api({
                   req.headers['x-forwarded-for'] ?? req.connection.remoteAddress ?? 'unknown!?',
               },
             ],
+            author: {
+              name: body.name,
+              icon_url: `https://avatars.dicebear.com/api/miniavs/${encodeURI(body.name)}.png`,
+            },
           },
         ],
       }),
     });
 
     if (result.status >= 400) {
+      console.log(result);
       res.throw(result.status, 'Error sending notification');
     }
 
