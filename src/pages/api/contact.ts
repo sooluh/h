@@ -16,7 +16,7 @@ export default api({
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        content: `Hey <@!${DISCORD_ID}>, there's a new message from the contact page!`,
+        content: `Hey <@!${DISCORD_ID}>, there's a new message from the contact page!\n_ _`,
         embeds: [
           {
             title: 'Respond This?',
