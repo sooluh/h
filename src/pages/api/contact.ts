@@ -1,6 +1,6 @@
 import {z} from 'zod';
 import {api} from '../../server/api';
-import {DISCORD_WEBHOOK} from '../../server/constants';
+import {DISCORD_ID, DISCORD_WEBHOOK} from '../../server/constants';
 
 const schema = z.object({
   name: z.string().trim(),
@@ -16,17 +16,23 @@ export default api({
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        content: 'Pesan baru dari website utama',
+        content: `Hey <@!${DISCORD_ID}>, there's a new message from the contact page!`,
         embeds: [
           {
-            description: body.body,
+            title: 'Respond This?',
+            url: `https://mailto.suluh.my.id/${encodeURIComponent(body.email)}`,
             author: {
               name: body.name,
+              icon_url: `https://avatars.dicebear.com/api/miniavs/${body.name}.png`,
             },
             fields: [
               {
-                name: 'Email Address',
+                name: 'Email',
                 value: body.email,
+              },
+              {
+                name: 'Message',
+                value: body.body,
               },
               {
                 name: 'IP Address',

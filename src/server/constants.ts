@@ -7,4 +7,5 @@ function env<Key extends keyof NodeJS.ProcessEnv>(key: Key) {
   return value;
 }
 
+export const DISCORD_ID = env('DISCORD_ID');
 export const DISCORD_WEBHOOK = env('DISCORD_WEBHOOK');
