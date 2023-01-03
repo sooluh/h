@@ -1,6 +1,6 @@
 import {z} from 'zod';
 import {api} from '../../server/api';
-import {DISCORD_ID, DISCORD_WEBHOOK} from '../../server/constants';
+import {DISCORD_WEBHOOK} from '../../server/constants';
 
 const schema = z.object({
   name: z.string().trim(),
@@ -16,7 +16,6 @@ export default api({
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        content: `Hey <@!${DISCORD_ID}>, there's a new message from the contact page!\n_ _`,
         embeds: [
           {
             title: 'Respond This?',
